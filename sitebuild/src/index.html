@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Static sitebuild</title>
+  <link href="../public/css/main.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="container">
+		<div class="row justify-content-between align-items-center">
+			<div class="col-auto">
+				Need any help? 
+				<a href="#" class="btn btn-circle question">
+					?
+				</a>
+			</div>
+			<div class="col-lg-5 left">
+				<div class="cart-containter">
+					<i class="fa fa-cart"></i>
+					4 items (716) EUR <span>in your basket</span>
+				</div>
+				<a href="#" class="btn btn-light">
+					<i class="fa fa-cart"></i>
+					<span class="d-none d-md-inline">Checkout</span>
+				</a>
+			</div>
+		</div>	
+	</header>
+	<main class="container">
+		<div class="row">
+			<div class="col-12">
+				<ul class="nav nav-tabs" id="catergories" role="tablist">
+				  <li class="nav-item">
+				    <a class="nav-link active" id="tickets-tab" data-toggle="tab" href="#tickets" role="tab" aria-controls="tickets" aria-selected="true">
+				    	<span>Entry tickets</span>
+				    	<i class="fa fa-ticket"></i>
+				    </a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="accessories-tab" data-toggle="tab" href="#accessories" role="tab" aria-controls="accessories" aria-selected="false">
+				    	<span>Accessories</span>
+				    	<i class="fa fa-cart-content"></i>
+				    </a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="food-tab" data-toggle="tab" href="#food" role="tab" aria-controls="food" aria-selected="false">
+				    	<span>Food services</span>
+				    	<i class="fa fa-fast-food"></i>
+				    </a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="vip-tab" data-toggle="tab" href="#vip" role="tab" aria-controls="vip" aria-selected="false"><span>Vip programs</span>
+				    	<i class="fa fa-microphone"></i>
+				    </a>
+				  </li>
+				</ul>
+			</div>
+			
+      <div class="col-12 tab-content" id="catergoriesContent">
+        <div class="tab-pane fade show active" id="tickets" role="tabpanel" aria-labelledby="tickets-tab">
+          <div class="card-container-outer">
+            <div class="content-inner">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-md-8 pr-0">
+                    <h2>10 days pass</h2>
+                    <ul class="list-inline rounds">
+                      <li class="list-inline-item">Early bird: 219 EUR</li>
+                      <li class="list-inline-item">Advanced Round 1: 229 EUR</li>
+                      <li class="list-inline-item">Advanced Round 1: 249 EUR</li>
+                      <li class="list-inline-item">Full price: 269 EUR</li>
+                    </ul>
+                    <ul class="list-inline services">
+                      <li class="list-inline-item"><i class="fa fa-cutlery"></i>Breakfast included</li>
+                      <li class="list-inline-item"><i class="fa fa-cocktail"></i>2 free cocktails</li>
+                      <li class="list-inline-item"><i class="fa fa-happy"></i>private shower</li>
+                      <li class="list-inline-item"><i class="fa fa-diamond"></i>Upgrade possibilities</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-auto pr-0">
+                    <div class="list-group cta">
+                      <div class="list-group-item price">369 EUR</div>
+                      <div class="list-group-item price discount">319 EUR</div>
+                      <div class="list-group-item cta">
+                        <button class="btn btn-primary btn-cta">
+                          <i class="fa fa-cart"></i>
+                          Add to basket
+                        </button>
+                      </div>
+                      <div class="list-group-item time-inner">
+                        Time left: <span class="timeleft"></span>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+          </div>
+          </div>
+
+          <div class="card-container-outer">
+            <div class="content-inner">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-md-8 pr-0">
+                    <h2>8 days pass</h2>
+                    <ul class="list-inline rounds">
+                      <li class="list-inline-item">Early bird: 219 EUR</li>
+                      <li class="list-inline-item">Full price: 269 EUR</li>
+                    </ul>
+                    <ul class="list-inline services">
+                      <li class="list-inline-item"><i class="fa fa-cutlery"></i>Breakfast included</li>
+                      <li class="list-inline-item"><i class="fa fa-cocktail"></i>2 free cocktails</li>
+                      <li class="list-inline-item"><i class="fa fa-happy"></i>private shower</li>
+                      <li class="list-inline-item"><i class="fa fa-diamond"></i>Upgrade possibilities</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-auto pr-0">
+                    <div class="list-group cta">
+                      <div class="list-group-item price">369 EUR</div>
+                      <div class="list-group-item price discount">319 EUR</div>
+                      <div class="list-group-item cta">
+                        <button class="btn btn-primary btn-cta d-none">
+                          <i class="fa fa-cart"></i>
+                          Add to basket
+                        </button>
+                        <h2>Coming soon!</h2>
+                      </div>
+                      <div class="list-group-item time-inner">
+                        Time left: <span class="timeleft"></span>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+          </div>
+          </div>
+
+
+          <div class="card-container-outer">
+          	<div class="content-inner">
+          			<div class="row justify-content-between align-items-center">
+              		<div class="col-md-8 pr-0">
+              			<h2>Special Caravan</h2>
+              			<ul class="list-inline rounds">
+              				<li class="list-inline-item">Early bird: 219 EUR</li>
+              				<li class="list-inline-item">Advanced Round 1: 229 EUR</li>
+              				<li class="list-inline-item">Advanced Round 1: 249 EUR</li>
+              				<li class="list-inline-item">Full price: 269 EUR</li>
+              			</ul>
+              			<ul class="list-inline services">
+              				<li class="list-inline-item"><i class="fa fa-cutlery"></i>Breakfast included</li>
+              				<li class="list-inline-item"><i class="fa fa-happy"></i>private shower</li>
+              			</ul>
+              		</div>
+              		<div class="col-md-auto pr-0">
+              			<div class="list-group cta">
+              				<div class="list-group-item price">369 EUR</div>
+              				<div class="list-group-item price discount">319 EUR</div>
+              				<div class="list-group-item cta">
+              					<button class="btn btn-primary btn-cta">
+              						<i class="fa fa-cart"></i>
+              						Add to basket
+              					</button>
+              				</div>
+              				<div class="list-group-item time-inner">
+                        Time left: <span class="timeleft"></span>
+                      </div>
+              			</div>
+              		</div>
+          	 </div>
+        	</div>
+        	
+        	<div class="accordion" id="ticket_accordion_1">
+      		  <div class="card">
+      		    <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      		      <h2>
+      		        Special caravan - for 2 people - 400 EUR
+      		      </h2>
+      		      <i class="fa fa-chevron-up"></i>
+      		    </div>
+
+              <div id="collapseOne" class="col-12 collapse" aria-labelledby="headingOne" data-parent="#ticket_accordion_1">
+                <div class="card-body">
+                  <div class="row justify-content-between">
+                		<div class="col-md-8">
+                			<ul class="list-unstyled main-list">
+          		        	<li>Located in the VIP Camping</li>
+              					<li>Private shower included</li>
+              					<li>Free breakfast included between 08 AM - 10 AM, 11 September, 2017 - 17 September, 2017</li>
+              					<li>Two types: Caravan for 2 people and caravan for 4 people</li>
+              					<li>Available with 10 Days Pass / 8 Days Pass / 2 or more consecutive Day tickets</li>
+              					<li>Valid: 10 AM, 10 September, 2017 – 10 AM, 17 September, 2017</li>
+                  		</ul>
+                		</div>
+                		<div class="col-md-auto pr-0">
+                			<div class="list-group cta">
+              				  <div class="list-group-item price discount">400 EUR</div>
+              				  <div class="list-group-item cta">
+                					<button class="btn btn-primary btn-cta">
+                						<i class="fa fa-cart"></i>
+                						Add to basket
+                					</button>
+              				</div>
+              				<div class="list-group-item time-inner">
+                        Time left: <span class="timeleft"></span>
+                      </div>
+            			   </div>
+                		</div>
+                	</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="ticket_accordion_2" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h2 class="mb-0">
+                   Special caravan - for 4 people - 500 EUR
+                </h2>
+                 <i class="fa fa-chevron-up"></i>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="ticket_accordion_2" data-parent="#ticket_accordion_1">
+                <div class="card-body">
+                	<div class="row justify-content-between">
+                		<div class="col-md-8">
+                			<ul class="list-unstyled main-list">
+          		        	<li>Located in the VIP Camping</li>
+              					<li>Private shower included</li>
+              					<li>Free breakfast included between 08 AM - 10 AM, 11 September, 2017 - 17 September, 2017</li>
+              					<li>Two types: Caravan for 2 people and caravan for 4 people</li>
+              					<li>Available with 10 Days Pass / 8 Days Pass / 2 or more consecutive Day tickets</li>
+              					<li>Valid: 10 AM, 10 September, 2017 – 10 AM, 17 September, 2017</li>
+                  		</ul>
+                		</div>
+                		<div class="col-md-auto pr-0">
+                			<div class="list-group cta">
+                				<div class="list-group-item price discount">500 EUR</div>
+                				<div class="list-group-item cta">
+                					<button class="btn btn-primary btn-cta">
+                						<i class="fa fa-cart"></i>
+                						Add to basket
+                					</button>
+                				</div>
+              				  <div class="list-group-item timeleft">00:00:00</div>
+            			   </div>
+                		</div>
+                	</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="accessories" role="tabpanel" aria-labelledby="accessories-tab">
+          <div class="card-container-outer">
+            <div class="content-inner">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-md-8 pr-0">
+                    <h2>10 days pass</h2>
+                    <ul class="list-inline rounds">
+                      <li class="list-inline-item">Early bird: 219 EUR</li>
+                      <li class="list-inline-item">Advanced Round 1: 229 EUR</li>
+                      <li class="list-inline-item">Advanced Round 1: 249 EUR</li>
+                      <li class="list-inline-item">Full price: 269 EUR</li>
+                    </ul>
+                    <ul class="list-inline services">
+                      <li class="list-inline-item"><i class="fa fa-cutlery"></i>Breakfast included</li>
+                      <li class="list-inline-item"><i class="fa fa-cocktail"></i>2 free cocktails</li>
+                      <li class="list-inline-item"><i class="fa fa-happy"></i>private shower</li>
+                      <li class="list-inline-item"><i class="fa fa-diamond"></i>Upgrade possibilities</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-auto pr-0">
+                    <div class="list-group cta">
+                      <div class="list-group-item price">369 EUR</div>
+                      <div class="list-group-item price discount">319 EUR</div>
+                      <div class="list-group-item cta">
+                        <button class="btn btn-primary btn-cta">
+                          <i class="fa fa-cart"></i>
+                          Add to basket
+                        </button>
+                      </div>
+                      <div class="list-group-item time-inner">
+                        Time left: <span class="timeleft"></span>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="food" role="tabpanel" aria-labelledby="food-tab"></div>
+        
+        <div class="tab-pane fade" id="vip" role="tabpanel" aria-labelledby="vip-tab"></div>
+      </div>
+		</div>
+	</main>
+  
+
+<script src="../public/js/base.js"></script>
+<script src="../public/js/main.js"></script>
+
+</body>
+</html>

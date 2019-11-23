@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'open-sans';
+  src: url('../assets/fonts/OpenSans/OpenSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'ubuntu';
+  src: url('../assets/fonts//ubuntu/Ubuntu-R.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'ubuntu-bold';
+  src: url('../assets/fonts//ubuntu/Ubuntu-B.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'custom-fa';
+  src:  url('../assets/fonts/fa.eot?uvsi3s');
+  src: url('../assets/fonts/fa.ttf?uvsi3s') format('truetype'),
+    url('../assets/fonts/fa.woff?uvsi3s') format('woff'),
+    url('../assets/fonts/fa.svg?uvsi3s') format('svg');
+}
+
+$fa-chevron-up: "\e90b";
+$fa-arrow_up: "\e900";
+$fa-shopping_cart_content: "\e901";
+$fa-ticket: "\e902";
+$fa-shopping_cart: "\e903";
+$fa-microphone_2: "\e904";
+$fa-cocktail: "\e905";
+$fa-cutlery: "\e906";
+$fa-fast_food: "\e907";
+$fa-happy_drop: "\e908";
+$fa-diamond: "\e909";
+$fa-hourglass: "\e90a";
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$fa:(
+    "arrow-up": $fa-arrow_up,
+    "cart": $fa-shopping_cart,
+    "cart-content": $fa-shopping_cart_content,
+    "ticket": $fa-ticket,
+    "microphone": $fa-microphone_2,
+    "cocktail": $fa-cocktail,
+    "cutlery": $fa-cutlery,
+    "fast-food": $fa-fast_food,
+    "happy": $fa-happy_drop,
+    "diamond": $fa-diamond,
+    "hourglass": $fa-hourglass, 
+    "chevron-up": $fa-chevron-up
+  );
+@mixin fa(){
+	font-family: custom-fa;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-rendering: auto;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.5em;
+  transition: .5s ease;
+	@each $name, $icon in $fa{
+		&.fa-#{$name}:before{
+			content:$icon;
+		}
+    &.rotate-180{
+      transform: rotate(180deg);
+    }
+	}
+	$sizes: 2,3,4,5;
+	@each $size in $sizes {
+		&.fa-#{$size}x {
+			font-size: 18px * $size;
+		}
+	}
+}
+
+//custom bootstrap
+$blue: #174e72;
+$blue-100: #2081c3;
+$blue-200: #5fc9dc;
+$yellow: #fed007;
+$green: #41a743;
+$purple: #90307d;
+$gray-100: #a0a0a0;
+$gray-200: #373737;
+$gray-300: #bbb;
+$white: #fff;
+
+$trs: transparent;
+
+
+$secondary: $purple;
+$warning: $yellow;
+$success: $green;
+$info: $blue-100;
+$light: $white;
+
+
+$enable-rounded: false;
+$enable-responsive-font-sizes: true;
+
+$font-family-base: "open-sans";
+$font-size-base: .875rem !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 980px,
+  xl: 1140px
+) !default;
+
+$grid-gutter-width: 40px !default;
+
+
+
+$nav-tabs-border-color: $trs;
+$nav-tabs-border-width: 0;
+$nav-tabs-link-hover-border-color: $trs;
+
