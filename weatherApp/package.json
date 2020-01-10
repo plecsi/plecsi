@@ -1,6 +1,7 @@
 {
-  "name": "crud",
-  "version": "0.1.0",
+  "name": "weatherApp",
+  "version": "0.0.1",
+  "author": "Plecsko Gergo - plecsi",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.8.2",
