@@ -1,0 +1,96 @@
+@import './variables';
+header{
+	&.container{
+		max-width: none;
+	}
+	.birthday{
+		font-family: $font-birthday;
+		font-size: 40px;
+		align-items: center;
+		position: relative;
+		&:before{}
+		.gray{
+			color: $gray;
+		}
+
+		.orange{
+			color: $orange;
+		}
+
+		@include media-breakpoint-down(sm){
+			span{
+				font-size: 80%;
+			}
+		}
+
+	}
+	.nav{
+		padding: 0;
+		@include media-breakpoint-up(lg){
+			padding: 10px 0;
+		}
+		&-item:not(:last-of-type){
+			margin-right: 13px;
+			@include media-breakpoint-up(lg){
+				margin-right: 61px;
+			}
+		}
+		&-link{
+			padding: 0 15px;
+			&.active, &:hover{
+				&:after{
+					content: '';
+					width: 31px;
+					display: block;
+					margin: 0 auto;
+					border-bottom: 1px solid $primary;
+				}
+			}
+		}
+	}
+
+	.custom-dropdown{
+		display: block;
+		padding: 25px 15px;
+		box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.17);
+		margin-right: -15px;
+		.line{
+			display: block;
+			margin-bottom: 5px;
+			width: 32.1px;
+			height: 4.5px;
+			border-bottom: 1px solid #454043;
+		}
+	}
+	.dropdown-menu{
+		top: 97%;
+		right: -30%;
+		border: 0;
+		border-radius: 0;
+		box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.17);
+		width: 247px;
+	}
+
+	.dropdown-item{
+		text-transform: uppercase;
+		text-align: center;
+		margin: 31px 0;
+	}
+	#start_btn{
+		padding: 7px 17px;
+	}
+}
+@include media-breakpoint-up(md){
+	header{
+		&.container{
+			max-width: 960px;
+		}
+	}
+}
+@include media-breakpoint-up(xl){
+	header{
+		&.container{
+			max-width: 1140px;
+		}
+	}
+}

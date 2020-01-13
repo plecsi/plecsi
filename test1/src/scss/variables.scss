@@ -1,0 +1,71 @@
+@import "./node_modules/bootstrap/scss/mixins/_breakpoints";
+@import "./font";
+$body-bg: rgba(0,0,0,0);
+
+$body-color: #454043;
+
+$font-family-base: $font-lato;
+
+$primary: #fbad42;
+
+$gray : #979797;
+$gray-100:#f7f7f7;
+$gray-200:#7f7f7f;
+$gray-300: #e1dedb;
+
+$orange: #d56c2c;
+$ligt-orange: #feebd2;
+$orange-200: #ebc36c;
+
+$btn-border-radius: 25px;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg:transparent;
+
+//fonnt variables
+
+$fa-long-arrow-right: "\e900";
+$fa-reply: "\e901";
+$fa-heart: "\e902";
+$fa-chevron-down: "\e903";
+$fa-chevron-right: "\e904";
+$fa-chevron-up: "\e905";
+$fa-chevron-left: "\e906";
+$fa-alarm-clock: "\e907";
+$fa-newspaper: "\e908";
+$fa-image: "\e909";
+$fa-calendar-alt: "\e90a";
+
+
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$fa:(
+    "arrow-right": $fa-long-arrow-right,
+	"reply": $fa-reply,
+    "heart": $fa-heart,
+    "chevron-up": $fa-chevron-up,
+    "chevron-down": $fa-chevron-down,
+    "chevron-left": $fa-chevron-left,
+    "chevron-right": $fa-chevron-right,
+    "alarm": $fa-alarm-clock,
+    "newspaper": $fa-newspaper,
+    "image": $fa-image,
+    "calendar": $fa-calendar-alt
+  );
+@mixin fa(){
+	font-family: custom-fa;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	font-size: 1.5em;
+	@each $name, $icon in $fa{
+		&.fa-#{$name}:before{
+			content:$icon;
+		}
+	}
+	$sizes: 2,3,4,5;
+	@each $size in $sizes {
+		&.fa-#{$size}x {
+			font-size: 18px * $size;
+		}
+	}
+}

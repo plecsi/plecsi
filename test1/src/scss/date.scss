@@ -1,0 +1,130 @@
+@import './variables';
+.custom-select-button{
+	background: $white;
+	cursor: default;
+	display: block;
+	padding: 2px 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	max-width: 180px;
+	z-index: 1;
+	outline: none;
+	overflow: hidden;
+	text-shadow: 0 2px 54px rgba(0, 0, 0, 0.49);
+  	font-size: 16px;
+	border: 0;
+	border-bottom:1px solid;
+	text-transform: lowercase;
+	&:after{
+		display: none;
+	}
+}
+
+.dropdown{
+	&:not(:last-of-type){
+		margin-right: 30px;
+		@include media-breakpoint-up(sm){
+			margin-right: 20px;
+		}
+		
+	}
+	.small-menu, .menu{
+		background: $white;
+		cursor: default;
+		overflow: hidden;
+		margin: 0;
+		max-height: 0;
+		position: absolute;
+		padding: 34px 15px 44px;
+		transform: translateY(50%)!important;
+		transition: all .6s cubic-bezier(0.35, 0, 0.25, 1);
+		border-radius: 6px;
+		box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.16);
+		border: 0;
+		min-width: initial;
+		&.small-menu{
+			max-width: 50px;
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+		i{
+			position: absolute;
+			color: $primary;
+			font-size: 15px;
+			left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+			&.fa-chevron-up{
+				top: 8px;
+			}
+			&.fa-chevron-down{
+				bottom: 11px;
+			}
+		}
+		.list-inner{
+			max-height: 166px;
+			overflow: auto;
+			.list-item{
+				text-align: center;
+				line-height: 2.07;
+				cursor: pointer;
+				text-transform: lowercase;
+			}
+		}
+	}
+	&.show{
+		.small-menu, .menu {
+			max-height: 244px;
+			overflow: hidden;
+			z-index: 2;
+			transition: all 1s ease;
+			transform: translateY(-50%)!important;
+		}
+	}
+}
+
+.date-conteiner{
+	max-width: 279px;
+	margin: 0 auto;
+	position: relative;
+	@include media-breakpoint-up(sm){
+		max-width: 481px;
+	}
+	span{
+		text-shadow: 0 2px 54px rgba(0, 0, 0, 0.49);
+  		font-size: 15px;
+  		line-height: 2.33;
+		color: $gray-200;
+	}
+	.input-group{
+		align-items: center;
+		border: 1px solid $gray-300;
+		border-radius: $btn-border-radius;
+		margin-bottom: 5px;
+		padding: 6px 0;
+		@include media-breakpoint-up(md){
+			max-width: 325px;
+		}
+		.input-group-prepend{
+			padding: 0 20px;
+		}
+	}
+	.input-button{
+		@include media-breakpoint-up(md){
+			position: absolute;
+			right: 0;
+			top: 30%;
+			transform: translateY(0);
+			width: 238px;
+		}
+		button{
+			font-size: 12px;
+			font-weight: 900;
+			padding: 15px 20px;
+			letter-spacing: normal;
+			text-align: center;
+			border-radius: $btn-border-radius;
+		}
+	}
+}

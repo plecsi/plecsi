@@ -1,0 +1,118 @@
+@import './variables';
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+body{
+	position: relative;
+	&:before{
+		position: fixed;
+		padding: 10px;
+		width: 40px;
+		height: 40px;
+		color: red;
+		top:10px;
+		left: 10px;
+		text-align: center;
+		background: rgba(0,0,0,.2);
+		content: 'xs';
+		@include media-breakpoint-up(sm){content: 'sm'}
+		@include media-breakpoint-up(md){content: 'md'}
+		@include media-breakpoint-up(lg){content: 'lg'}
+		@include media-breakpoint-up(xl){content: 'xl'}
+		z-index: 9999;
+	}
+}
+
+.btn{
+	text-transform: uppercase;
+	color: $body-color;
+	&-primary{
+		color:$white !important;
+	}
+	&-link{
+		color: $gray;
+	}
+}
+
+i[class^="fa"]{ @include fa(); }
+
+.content-container{
+	&:nth-of-type(even){
+		background: $ligt-orange;
+	}
+}
+
+#first_content{
+	position: relative;
+	background: radial-gradient(circle at 50% 50%, #2f466c, #2b4164 100%),
+				url("../assets/images/happy-mothers-day-ntlshxg.png");
+	background-repeat: no-repeat;
+	background-blend-mode:overlay;
+	object-fit: contain;
+	background-size: 150%;
+	background-position: top;
+	@include media-breakpoint-up(md){
+		background-size: 100%;
+	}
+	.content{
+		position: relative;
+		top: 0;
+		color: $white;
+		padding: 0;
+		h2{
+			font-family: $font-Merriweather;
+			text-transform: capitalize;
+			text-align: center;
+			margin-top: 63px;
+			font-size: 40px;
+			font-weight: 700;
+			@include media-breakpoint-up(md){
+				margin-top:  59px;
+				font-size:39px;
+			}
+		}
+		p{
+			font-size: 20px;
+			font-weight: 300;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.75;
+			letter-spacing: normal;
+			text-align: center;
+		}
+		.newspapper{
+			object-fit: contain;
+			box-shadow: 0 2px 104px 0 rgba(0, 0, 0, 0.6);
+		}
+	}
+}
+
+#video_content{
+	padding: 19px 17px 41px;
+	.video-content-inner{
+		justify-content: center;
+		margin: 0;
+	}
+	p{
+		font-size: 20px;
+  		font-weight: 300;
+		text-align: center;
+	}
+	
+	@include media-breakpoint-up(md){
+		padding: 72px 0;
+		p{
+			font-size: 26px;
+			margin-bottom: 4em;
+		}
+		.reply{
+			position: absolute;
+			top:35%;
+			right: 0;
+			transform: rotate(-200deg) translateY(0);
+		}
+	}
+}
+
+@import './header';
+@import './gift';
+@import './date';

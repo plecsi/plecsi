@@ -1,0 +1,167 @@
+{
+  "cards": [
+	  {
+    		"id": "giftCards",
+			"image":"<i class=\"fa-calendar fa-3x\"></i>",
+			"title":"Aznapi újság, amikor Ő született",
+			"content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+			"rating":5,
+			"rating_img":"",
+			"name":"", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	}, 
+	  {
+    	"id": "giftCards",
+			"image":"<i class=\"fa-image fa-3x\"></i>",
+			"title":"Egyedi cikk és kép",
+			"content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+			"rating":5,
+			"rating_img":"",
+			"name":"", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	}, 
+	  {
+    	"id": "giftCards",
+			"image":"<i class=\"fa-newspaper fa-3x\"></i>",
+			"title":"Válaszd ki, mi legyen az alap újság",
+			"content":"100+ újság közül választhatod ki azt, ami a legközelebb áll az ajándékozotthoz.",
+			"rating":5,
+			"rating_img":"",
+			"name":"",
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	}, 
+	  {
+    		"id": "giftCards",
+			"image":"<i class=\"fa-alarm fa-3x\"></i>",
+			"title":"Akár 2 nap múlva nálad",
+			"content":"Nem baj, ha sürgős. Rendels SOS verziót, és 2 nap múlva kézhez kapod az újságot.",
+			"rating":5,
+			"rating_img":"",
+			"name":"", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	}, 
+	  {
+    	"id": "makeCards",
+			"image":{
+				"src": "./assets/images/img-2.png",
+				"srcset": "./assets/images/img-2@2x.png 2x,./assets/images/img-2@3x.png 3x"
+			},
+			"title":"",
+			"content":"Kedves \"Meglepkék\" szombaton rendeltünk Nálatok egy 12 oldalas újságot 40. születésnapra, tegnap este átadtuk az ünnepeltnek. Azt leírni nem tudom, hogy milyen hatással volt rá, de az öröm, a meglepetés óriási volt, ezúton szeretném megköszönni odafigyelő, gyors hozzáállásotokat és az ÖRÖK emlék újságot.",
+			"rating":5,
+			"rating_img":"fa-heart",
+			"name":"zsuzsa", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	},
+	  {
+    	"id": "makeCards",
+			"image":{
+				"src":"./assets/images/img-2.png",
+				"srcset": "./assets/images/img-2@2x.png 2x,./assets/images/img-2@3x.png 3x"
+			},
+			"title":"",
+			"content":"Kedves \"Meglepkék\" szombaton rendeltünk Nálatok egy 12 oldalas újságot 40. születésnapra, tegnap este átadtuk az ünnepeltnek. Azt leírni nem tudom, hogy milyen hatással volt rá, de az öröm, a meglepetés óriási volt, ezúton szeretném megköszönni odafigyelő, gyors hozzáállásotokat és az ÖRÖK emlék újságot.",
+			"rating":5,
+			"rating_img":"fa-heart",
+			"name":"zsuzsa", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	},
+	  {
+    	"id": "makeCards",
+			"image":{
+				"src":"./assets/images/img-2.png",
+				"srcset": "./assets/images/img-2@2x.png 2x,./assets/images/img-2@3x.png 3x"
+			},
+			"title":"",
+			"content":"Kedves \"Meglepkék\" szombaton rendeltünk Nálatok egy 12 oldalas újságot 40. születésnapra, tegnap este átadtuk az ünnepeltnek. Azt leírni nem tudom, hogy milyen hatással volt rá, de az öröm, a meglepetés óriási volt, ezúton szeretném megköszönni odafigyelő, gyors hozzáállásotokat és az ÖRÖK emlék újságot.",
+			"rating":3,
+			"rating_img":"fa-heart",
+			"name":"zsuzsa", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	},
+	  {
+    	"id": "makeCards",
+			"image":{
+				"src":"./assets/images/img-2.png",
+				"srcset": "./assets/images/img-2@2x.png 2x,./assets/images/img-2@3x.png 3x"
+			},
+			"title":"",
+			"content":"Kedves \"Meglepkék\" szombaton rendeltünk Nálatok egy 12 oldalas újságot 40. születésnapra, tegnap este átadtuk az ünnepeltnek. Azt leírni nem tudom, hogy milyen hatással volt rá, de az öröm, a meglepetés óriási volt, ezúton szeretném megköszönni odafigyelő, gyors hozzáállásotokat és az ÖRÖK emlék újságot.",
+			"rating":5,
+			"rating_img":"fa-heart",
+			"name":"zsuzsa", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	},
+	  {
+    	"id": "makeCards",
+			"image":{
+				"src":"./assets/images/img-2.png",
+				"srcset": "./assets/images/img-2@2x.png 2x,./assets/images/img-2@3x.png 3x"
+			},
+			"title":"",
+			"content":"Kedves \"Meglepkék\" szombaton rendeltünk Nálatok egy 12 oldalas újságot 40. születésnapra, tegnap este átadtuk az ünnepeltnek. Azt leírni nem tudom, hogy milyen hatással volt rá, de az öröm, a meglepetés óriási volt, ezúton szeretném megköszönni odafigyelő, gyors hozzáállásotokat és az ÖRÖK emlék újságot.",
+			"rating":5,
+			"rating_img":"fa-heart",
+			"name":"zsuzsa", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	},
+	  {
+    	"id": "customCards",
+			"image":{
+				"src":"./assets/images/newspaper-mockup.png",
+				"srcset": "./assets/images/newspaper-mockup@2x.png 2x,./assets/images/newspaper-mockup@3x.png 3x"
+			},
+			"title":"Születéskori baba fotó az ünnepeltről",
+			"content":"Semmi gond, választhatsz grafikáink vagy fotóink közül",
+			"rating":"",
+			"rating_img":"",
+			"name":"", 
+			"lists": "",
+			"price":"", 
+			"currency":""
+  	}
+	  
+  ],
+	"container": [
+		{
+			"id": "giftCards" , 
+			"title":"This gift makes everybody cry.", 
+			"content": ""
+			
+		},
+		 {
+			"id": "makeCards",
+			 "title": "Make your (ünnepeltedet)  Thrilled!", 
+			 "content": "<strong class=\"asd\">Apa, anya, nagyszülők, kolléga,</strong><br/> Tökéletes ajándék  szülinapra, házassági évfordulóra, stb. Így fognak örülni a megajándékozottak:"
+		 },
+		{
+			"id": "customCards",
+			 "title": "Egyedi tartalmak, amikkel feldobhatod az ajándékod", 
+			 "content": ""
+		 },
+		{
+			"id": "video",
+			 "title": "", 
+			 "content": "Nézd meg a videón, hogy hogyan néz ki egy elkészült replica", 
+			"video": ""
+		 }
+	]
+}

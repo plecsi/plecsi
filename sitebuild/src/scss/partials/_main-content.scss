@@ -1,0 +1,148 @@
+.tab-pane{
+  margin-top: 21px;
+
+  //padding: 42px 60px 30px 44px;
+  padding:0;
+  
+  .card-container-outer{
+    margin-bottom:1em;
+      border:1px solid $gray-400;
+       box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  .content-inner{
+    padding: 42px 80px 30px 40px;
+    position:relative;
+   
+  &:before, &:after{
+    content:"";
+    width:22px;
+    height:38px;
+    background:$trs;
+    border-radius:0 19px 19px 0;
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    border:1px solid $gray-400;
+    border-left-color:$white;
+
+  }
+  &:before{
+    left:-1px; 
+    box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.1)
+  }
+  &:after{
+    right:-1px;
+    transform: rotate(180deg) translateY(50%);
+     box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.1)
+  }
+  }
+  h2{
+    color:$secondary;
+    font-size:38px;
+    font-family:'ubuntu-bold';
+    text-transform: capitalize;
+  }
+  .rounds{
+    .list-inline-item{
+      margin:0;
+      &:not(:first-of-type){
+        color: $gray-100
+      }
+      &:not(:last-of-type){
+        &:after{
+          content:">";
+          color:$gray-100;
+          padding: 0 4px;
+        }
+      }
+    }
+  }
+
+  .services{
+    display:flex;
+    flex-flow: row wrap;
+    .list-inline-item{
+      display:flex;
+      flex-flow: column;
+      flex:0;
+      text-align:center;
+      i{
+        color: $info;
+        padding:10px;
+        border-radius:50%;
+        border:2px solid $info;
+        font-size:2.5em;
+        line-height:1.5;
+        width:70px;
+        height:70px;
+      }
+    }
+  }
+.cta{
+  border:0;
+  .list-group-item{
+    border:0;
+    padding: 0;
+  }
+  .price{
+    font-size:20px;
+    color:$gray-300;
+    text-decoration: line-through;
+    &.discount{
+      font-family:"ubuntu-bold";
+      color: $secondary;
+      font-size:2.855em;
+      text-decoration:none;
+    }
+  }
+  .time-inner{
+    text-align:right;
+    margin-top:15px;
+    padding-right: 40px;
+    .timeleft{
+      color: $secondary;
+    }
+  }
+  h2{
+    font-family:"ubuntu-bold";
+    color:$primary;
+    font-size:30px;
+  }
+ }
+  .accordion{
+  .card{
+    &-body{
+      padding: 35px 60px 35px 20px;
+    }
+    &-header{
+      display:flex;
+      flex-flow:row;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:0;
+      background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
+    h2{
+      font-family:"ubuntu-bold";
+      font-size:1.285em;
+      color:$gray-200;
+      padding:0;
+      margin-bottom:0;
+      position:relative;
+    }
+  }
+  .main-list{
+    li{
+      position:relative;
+      &:before{
+        position:absolute;
+        left:-20px;
+        content:'>';
+        
+        color: $gray-300;
+    }
+    }
+  }
+  }
+ }
+}

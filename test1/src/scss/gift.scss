@@ -1,0 +1,116 @@
+@import "./variables";
+@import "./cards";
+
+.arrow-buttons{
+	max-width: 890px;
+	margin: 0 auto;
+	margin-bottom: 27px;
+	.btn{
+		width: 40px;
+		height: 40px;
+		margin: 0 5px;
+	}
+	i{font-size: 14px;}
+}
+
+#card_giftCards{
+	padding-top:40px;
+	padding-bottom: 61px;
+	h2{
+		font-size: 30px;
+		@include media-breakpoint-up(md){
+			font-size: 39px;
+		}
+		
+		font-weight: 300;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.15;
+		letter-spacing: normal;
+		text-align: center;
+		color: #1a1b1c;
+		margin-bottom: 39px;
+	}
+	@include card(270px, 250px, $white)
+	i{
+		color: $primary;
+	}
+	
+}
+
+#card_makeCards{
+	padding-top: 58px; 
+	h2{
+		font-size: 30px;
+		@include media-breakpoint-up(md){
+			font-size: 36px;
+		}
+		font-family: Merriweather;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: $primary;
+		margin-bottom: 35px;
+	}
+	p{
+		text-align: center;
+		font-size: 17px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.88;
+		letter-spacing: normal;
+		text-align: center;
+	}
+	@include card(270px, 519px, $gray-100, 209px, $font-lora, 14px,#404040);
+	.card-container-inner{
+		max-width: 1080px;
+		margin: 0 auto;
+		.card-container{
+			margin-right: 80px;
+		}
+	}
+	.custom-card-text{
+		font-style: italic;
+		text-align: left!important;
+		line-height: 1.71!important;
+		padding-left: 9px;
+		padding-right: 8px;
+		max-height: 143px;
+		overflow: hidden;
+		margin-bottom: 42px;
+	}
+}
+#card_customCards{
+	h2{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 30px;
+		}
+		font-family: Merriweather;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		margin-bottom: 64px;
+	}
+	p{
+		text-align: center;
+		font-size: 17px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.88;
+		letter-spacing: normal;
+		text-align: center;
+	}
+	img:not(.fa){
+		margin-bottom: 16px!important;
+	}
+	@include card(270px,300px, $gray-100, 149px);
+}

@@ -1,0 +1,28 @@
+.main-sidebar {
+  border-right: 1px solid #e7e7e7;
+  position: relative;
+  width: 300px;
+
+  .file-list {
+    bottom: 60px;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__add {
+    background-color: #198f35;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    bottom: 0;
+    display: block;
+    font-size: 16px;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
