@@ -1,14 +1,11 @@
 <?php
-// show error reporting
+// error
 error_reporting(E_ALL);
- 
-// set your default time-zone
-date_default_timezone_set('Asia/Manila');
- 
-// variables used for jwt
-$key = "example_key";
-$iss = "http://example.org";
-$aud = "http://example.com";
-$iat = 1356999524;
-$nbf = 1357000000;
+date_default_timezone_set('Europe/Budapest');
+// to jwt
+$key = "key";
+$iss = "http://example.com";
+$aud = "http://example.hu";
+$iat = 1715299741;
+$nbf = 172790000;
 ?>

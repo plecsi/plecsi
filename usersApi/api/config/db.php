@@ -1,15 +1,15 @@
 <?php
-// used to get mysql database connection
+
 class Database{
  
-    // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "crud";
-    private $username = "root";
-    private $password = "root";
+    private $db_name = "dbname";
+    private $username = "dbuser";
+    private $password = "dbpassword";
+	private $port = "8888";
     public $conn;
  
-    // get the database connection
+    //db connection
     public function getConnection(){
  
         $this->conn = null;

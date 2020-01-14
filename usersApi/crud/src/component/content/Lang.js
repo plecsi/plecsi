@@ -7,7 +7,6 @@ function Lang(props) {
   const submitCallback = e => {
     const result = submit(LangModel)
     console.log('submit', result)
-    //CurrentWeathers(result); 
 }
   return (
     <>
