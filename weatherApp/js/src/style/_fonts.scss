@@ -1,0 +1,107 @@
+@font-face {
+	font-family: custom-fa;
+	src: url("./fonts/custom-fa.ttf"),
+		url("./fonts/custom-fa.woff"),
+		url("./fonts/custom-fa.eot");
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@mixin fa($args...) {
+  @debug keywords($args);
+
+  $fa-size: 1.5em;
+
+  @each $name, $icon in keywords($args) {
+    .#{$name} {
+        font-family: custom-fa;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        font-size: $fa-size;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+        &:before{
+            content: $icon;
+            }
+    }
+  }
+  $sizes: 2,3,4,5;
+	@each $size in $sizes {
+        @debug $size;
+		&.fa-#{$size}x {
+			font-size: $fa-size * $size;
+		}
+	}
+}
+
+@include fa(
+  $fa-raindrops: "\e91c",
+  $fa-sunset: "\e91d",
+  $fa-sunrise: "\e91e",
+  $fa-cloud-hail-mixed: "\e91f",
+  $fa-cloud-drizzle: "\e920",
+  $fa-cloud-moon: "\e921",
+  $fa-cloud-meatball: "\e922",
+  $fa-cloud-hail: "\e923",
+  $fa-clouds-sun: "\e924",
+  $fa-clouds: "\e925",
+  $fa-cloud-moon-rain: "\e926",
+  $fa-clouds-moon: "\e927",
+  $fa-cloud-sun-rain: "\e928",
+  $fa-cloud-sleet: "\e929",
+  $fa-cloud-showers: "\e92a",
+  $fa-cloud: "\e92b",
+  $fa-cloud-showers-heavy: "\e92c",
+  $fa-cloud-rain: "\e92d",
+  $fa-cloud-snow: "\e92e",
+  $fa-cloud-rainbow: "\e92f",
+  $fa-cloud-sun: "\e930",
+  $fa-moon-cloud: "\e931",
+  $fa-moon-stars: "\e932",
+  $fa-poo-storm: "\e933",
+  $fa-smoke: "\e934",
+  $fa-snow-blowing: "\e935",
+  $fa-snowflakes: "\e936",
+  $fa-thunderstorm-moon: "\e937",
+  $fa-thunderstorm-sun: "\e938",
+  $fa-thunderstorm: "\e939",
+  $fa-fog: "\e93a",
+  $fa-sun-cloud: "\e93b",
+  $fa-sun-haze: "\e93c",
+  $fa-sun: "\e93d",
+  $fa-sun-dust: "\e93e",
+  $fa-wind: "\e93f",
+  $fa-trash-restore: "\e940",
+  $fa-pencil-alt: "\e941",
+  $fa-minus-circle: "\e900",
+  $fa-home: "\e901",
+  $fa-times-circle: "\e902",
+  $fa-search: "\e903",
+  $fa-envelope-open-dollar: "\e904",
+  $fa-envelope-open-text: "\e905",
+  $fa-envelope-open: "\e906",
+  $fa-envelope: "\e907",
+  $fa-female: "\e908",
+  $fa-male: "\e909",
+  $fa-user-alt: "\e90a",
+  $fa-user-secret: "\e90b",
+  $fa-chevron-circle-down: "\e90c",
+  $fa-chevron-circle-left: "\e90d",
+  $fa-chevron-circle-right: "\e90e",
+  $fa-chevron-circle-up: "\e90f",
+  $fa-chevron-double-down: "\e910",
+  $fa-chevron-double-left: "\e911",
+  $fa-chevron-double-right: "\e912",
+  $fa-chevron-double-up: "\e913",
+  $fa-chevron-down: "\e914",
+  $fa-chevron-left: "\e915",
+  $fa-chevron-right: "\e916",
+  $fa-chevron-square-down: "\e917",
+  $fa-chevron-square-left: "\e918",
+  $fa-chevron-square-right: "\e919",
+  $fa-chevron-square-up: "\e91a",
+  $fa-chevron-up: "\e91b"
+)
