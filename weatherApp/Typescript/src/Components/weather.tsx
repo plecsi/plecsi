@@ -39,10 +39,10 @@ const Weather: React.FC<any> = (props:ApiWeather) => {
     const weather  = props
 
     const curTime:any = new Date(weather.dt * 1000).toDateString()
-    const sunset:any = new Date(weather.sys.sunset * 1000).toLocaleTimeString()
-    const sunrise:any = new Date(weather.sys.sunrise * 1000).toLocaleTimeString()
-    const dimension = props.units === "metric" ? "\xB0C" : props.units === "imperial" ? "\xB0F" : "K"
-    const day:any =  curTime > curTime-1 ? 0 : 1
+    const sunset:string = new Date(weather.sys.sunset * 1000).toLocaleTimeString()
+    const sunrise:string = new Date(weather.sys.sunrise * 1000).toLocaleTimeString()
+    const dimension:string = props.units === "metric" ? "\xB0C" : props.units === "imperial" ? "\xB0F" : "K"
+    const day:boolean =  curTime > curTime-1 ? true : false
     const weatherIcon = (id: number ) => id < 232  ? 'fa-thunderstorm' : 
                               id < 321  ? 'fa-cloud-drizzle' :
                               id < 504  ? 'fa-cloud-rain' : 
@@ -50,10 +50,10 @@ const Weather: React.FC<any> = (props:ApiWeather) => {
                               id < 531 ? 'cloud-drizzle fa-cloud-snow': 
                               id < 622 ? 'fa-snowflakes': 
                               id < 781  ? 'fa-fog': 
-                              800 === id && day !== 0  ? 'fa-sun' : 
-                              800 === id && day !== 1  ?'fa-moon-stars' :
-                              801 === id && day !== 0 ? 'fa-cloud-sun' : 
-                              801 === id && day !== 1 ? 'fa-cloud-moon' : 
+                              800 === id && day ? 'fa-sun' : 
+                              800 === id && !day ? 'fa-moon-stars' :
+                              801 === id && day ?  'fa-cloud-sun' : 
+                              801 === id && !day ? 'fa-cloud-moon' : 
                               802 === id ? 'fa-cloud' : 
                               803 === id ? 'fa-clouds' :
                               804 === id ? 'fa-clouds' : ''
