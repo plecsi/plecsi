@@ -1,0 +1,59 @@
+$font-family-base: $base-font;
+$font-size-base: 1.25rem;
+
+$white: #fff;
+$black: #000;
+$gray-100: #FAFAFA;
+$gray-200: #E9E9E9;
+$gray-300: #F7F7F7;
+$gray-400: #EBEBEB;
+$gray-500: #ABABAB;
+$gray-600: #979797;
+$gray-700: #DBDBDB;
+$gray-800: #AEAEAE;
+$gray-900: #292929;
+
+$brown: #242123;
+
+$font-color: #2E2E2E;
+
+$bars-color: #3A3A3A;
+$card-color: #5A5A5A;
+
+$light-red: #C4A37B;
+
+
+
+
+$primary: $black;
+$secondary: $light-red;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1340px
+) !default;
+
+$grid-gutter-width: 80px;
+
+
+//navbar
+$navbar-light-color: $font-color;
+
+
+//list-group
+$list-group-border-color: $gray-200;
+
+
+//cards
+$card-border-radius: 0;
+$card-border-color: rgba($gray-900, 0.1);
+$card-deck-margin: 15px;
+
+//form 
+$input-font-size: .875rem;
+$input-height: 42px;
+$input-color: $gray-800;
+$input-border-color: $gray-700;
+$input-border-radius: 0;

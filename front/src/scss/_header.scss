@@ -1,0 +1,130 @@
+header {
+  .navbar {
+    padding: 0.5rem 0;
+    &.navbar-expand-lg {
+      justify-content: space-between;
+    }
+    //logo
+    .navbar-brand {
+      display: flex;
+      padding: 7px 0;
+      .logo {
+        display: inline-block;
+        background: url("../assets/images/Front_logo.svg") no-repeat;
+        width: 120px;
+        height: 36px;
+        max-width: 87px;
+        max-height: 26px;
+      }
+    }
+    //toogler btn
+    .navbar-toggler {
+      padding: 0;
+      &:focus,
+      &:active {
+        outline: 0;
+      }
+      &.collapsed {
+        .fa-times {
+          display: none;
+        }
+      }
+      &:not(.collapsed) {
+        .fa-bars {
+          display: none;
+        }
+      }
+    }
+
+    //collapse div
+    .navbar-collapse {
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      justify-content: flex-end;
+      &.show {
+        height: 100%;
+        overflow: auto;
+        background: rgba($black, 0.75);
+        margin-top: 0;
+      }
+
+      //megamenu
+      #megamenu {
+        .list-group {
+          border-top: 1px solid $gray-600;
+          background: $gray-100;
+          .list-group-item {
+            background: none;
+            padding: 0;
+            &:not(:last-of-type) {
+              margin-right: 15px;
+            }
+            .btn{
+              font-weight: 700;
+            }
+          }
+          &.sub-menus {
+            border: 0;
+            background: none;
+            padding: 0 30px;
+            .list-group-item {
+              border: 0;
+              color: $font-color;
+              font-size: 18px;
+              line-height: 36px;
+              text-decoration: none;
+            }
+          }
+          .btn {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            color: $font-color;
+            font-size: 1.25rem;
+            line-height: 56px;
+            &:focus,
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  //media querys
+  @include media-breakpoint-up(md) {
+    .navbar {
+      .navbar-brand {
+        .logo {
+          max-width: initial;
+          max-height: initial;
+        }
+      }
+      .navbar-collapse {
+        position: relative;
+        top: 0;
+        #megamenu {
+          .list-group {
+            flex-flow: row;
+            border: 0;
+            background: none;
+            .list-group-item {
+              border: 0;
+              &:hover {
+                border-bottom: 1px solid red;
+              }
+              .btn {
+                font-size: 1.15rem;
+                &:after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

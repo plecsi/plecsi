@@ -1,0 +1,35 @@
+.cards-inner {
+  margin-top: 31px;
+  .card-deck {
+    justify-content: space-between;
+    .card {
+      margin-bottom: 19px;
+      .card-body {
+        padding: 1.25rem 1.315rem;
+        h5 {
+          font-size: 14px;
+          font-weight: 700;
+          color: $card-color;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .card-deck {
+      .card {
+        margin-bottom: 19px;
+        .card-body {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          padding-right: 2.375rem;
+          h5 {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

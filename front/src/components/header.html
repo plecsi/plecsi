@@ -1,0 +1,72 @@
+<div class="container-fluid bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="./">
+            <i class="logo"></i>
+        </a>
+        <button id="menutoggler" class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse"
+            data-target="#collapsingNavbar">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-times"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+            <div class="accordion" id="megamenu">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item">
+                        <a class="btn btn-link btn-fa-chevron-right" href="#">
+                            Shop
+                        </a>
+                    </div>
+                    <div class="list-group-item">
+                        <button class="btn btn-link btn-fa-chevron-right collapsed has-submenu" type="button"
+                            data-toggle="collapse" data-target="#collection" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            Collection
+                        </button>
+                        <div id="collection" class="collapse" data-parent="#megamenu">
+                            <div class="list-group sub-menus">
+                                <a href="#" class="list-group-item">Brands</a>
+                                <a href="#" class="list-group-item">Men's watches</a>
+                                <a href="#" class="list-group-item">Ladies's watches</a>
+                                <a href="#" class="list-group-item">Kids watches</a>
+                                <a href="#" class="list-group-item">Categories</a>
+                                <a href="#" class="list-group-item">Smart watches</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <button class="btn btn-link btn-fa-chevron-right collapsed has-submenu" type="button"
+                            data-toggle="collapse" data-target="#accessories" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            Accessories
+                        </button>
+                        <div id="accessories" class="collapse" data-parent="#megamenu">
+
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <a class="btn btn-link btn-fa-chevron-right" href="#">
+                            Gift guide
+                        </a>
+                    </div>
+                    <div class="list-group-item">
+                        <a class="btn btn-link btn-fa-chevron-right" href="#">
+                            Blog
+                        </a>
+                    </div>
+                    <div class="list-group-item">
+                        <a class="btn btn-link btn-fa-chevron-right" href="#">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </nav>
+</div>
+
+<script>
+    $(function(){
+       $('#menutoggler').on('click', function(){
+           $('body').toggleClass('overlay');
+       })
+    });
+</script>

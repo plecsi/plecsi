@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,900,900i&display=swap");
+$base-font: "Montserrat", sans-serif;
+
+@font-face {
+  font-family: custom-fa;
+  src: url("../assets/fonts/customfa.ttf"), url("../assets/fonts/customfa.woff"), url("../assets/fonts/customfa.eot");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@mixin fa($args...) {
+  //@warn @debug keywords($args);
+
+  $fa-size: 1em;
+
+  @each $name, $icon in keywords($args) {
+    .fa {
+      font-family: custom-fa;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px;
+
+      &.#{$name} {
+        &:before {
+          content: $icon;
+        }
+      }
+    }
+
+    &.btn-#{$name} {
+      
+      &:after {
+        font-family: custom-fa;
+        content: $icon;
+      }
+      &.has-submenu {
+        transition: 0.4s ease;
+        &:not(.collapsed) {
+          &:after {
+            transform: rotate(-90deg);
+          }
+        }
+        &.collapsed {
+          &:after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+  $sizes: 2, 3, 4, 5;
+  @each $size in $sizes {
+    // @debug $size;
+    &.fa-#{$size}x {
+      font-size: $fa-size * $size;
+    }
+  }
+}
+
+@include fa(
+  $fa-times: "\e906",
+  $fa-bars: "\e900",
+  $fa-chevron-down: "\e901",
+  $fa-chevron-left: "\e902",
+  $fa-chevron-right: "\e903",
+  $fa-chevron-up: "\e904",
+  $fa-arrow: "\e905",
+  $fa-leather: "\e909",
+  $fa-spring: "\e90a",
+  $fa-warranty: "\e90b",
+  $fa-water: "\e90c"
+);

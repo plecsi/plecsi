@@ -1,0 +1,29 @@
+.btn{
+    &-primary{
+        color: $white;
+        border-radius: 0;
+        font-weight: 600;
+        line-height: 28px;
+        font-size: 18px;
+        padding: .75rem 2.08rem
+    }
+    &-secondary{
+        background: none;
+        color: $light-red;
+        border:0;
+        padding: 0;
+        font-size: .875rem;
+        display: flex;
+        align-items: center;
+        &:focus, &:hover, &:active{
+            border:0;
+            background: none;
+        }
+        &:after{
+            margin-left:10px
+        }
+        @include media-breakpoint-up(md){
+            font-size: 1rem;
+        }
+    }
+}
