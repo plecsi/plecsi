@@ -1,6 +1,6 @@
 const gulp = require('gulp');
-const sass = require( 'gulp-sass');
-const autoprefixer = require( 'gulp-autoprefixer');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const cssmin = require('gulp-cssmin');
 
@@ -12,22 +12,22 @@ var currentTask
 
 const css = (done) => {
 	const resources = config.Tasks;
-	
+
 	for (var cssTask in resources) {
 		var filelist = resources[cssTask];
 		var extension = '.scss';
 
-		var ScssFile = filelist.filter(function(file){
+		var ScssFile = filelist.filter(function (file) {
 			return file.indexOf(extension) !== -1;
 		});
-		
-		
+
+
 		const outputName = `${cssTask}`;
-		if(ScssFile != ''){
-		gulp.src(ScssFile, {sourcemaps: true})
+		if (ScssFile != '') {
+			gulp.src(ScssFile, { sourcemaps: true })
 				.pipe(sass())
 				.pipe(autoprefixer())
-				.pipe(cssmin({showLog: true}))
+				.pipe(cssmin({ showLog: true }))
 				.pipe(concat(`${outputName}.css`))
 				.pipe(gulp.dest(`${distCSS}`))
 			console.log(`--------- \n EXECUTING TASK: \x1b[31m ${cssTask}CSS \x1b[0m with following resources: \x1b[32m \u2714 \x1b[36m ${ScssFile} \x1b[0m`);
@@ -35,7 +35,7 @@ const css = (done) => {
 		}
 
 	}
-    done();
+	done();
 }
 exports.css = css;
 
@@ -43,15 +43,15 @@ var getTasksByFiles = (varToSearch, jsonData, level = 0) => {
 	var val;
 
 	for (var key in jsonData) {
-		if ( level == 0 ) {
+		if (level == 0) {
 			currentTask = key;
 		}
-		if(typeof(jsonData[key]) === 'object') {
-			getTasksByFiles(varToSearch, jsonData[key], level+1);
+		if (typeof (jsonData[key]) === 'object') {
+			getTasksByFiles(varToSearch, jsonData[key], level + 1);
 		} else {
-			val = jsonData[key].replace('./','');
+			val = jsonData[key].replace('./', '');
 			if (varToSearch.endsWith(val) && val !== '') {
-				selectedTasks.push(currentTask)			
+				selectedTasks.push(currentTask)
 			}
 		}
 	}
@@ -63,17 +63,17 @@ const WatchCss = (done) => {
 	gulp.watch([`${fsrc}/**/*.css`, `${fsrc}/**/*.*css`]).on('change', (file) => {
 		//console.log('file', file)
 		selTasks = getTasksByFiles(file, config.Tasks);
-		if(selTasks != ''){
+		if (selTasks != '') {
 			selectedTasks = []
-			selTasks.forEach(function(k) {
+			selTasks.forEach(function (k) {
 				let resources = config.Tasks[k]
 				var filelist = resources;
 				var extension = '.scss';
-				var ScssFile = filelist.filter(function(files){
+				var ScssFile = filelist.filter(function (files) {
 					return files.indexOf(extension) !== -1;
 				});
 				let outputName = `${k}`;;
-			
+
 				console.log(`--------- \n EXECUTING (S)CSS-TASK: \x1b[31m  ${k}CSS \x1b[0m with following resources: \x1b[32m \u2714 \x1b[36m ${k}.css \x1b[0m \n ---------`);
 
 				gulp.src(ScssFile)
@@ -86,8 +86,8 @@ const WatchCss = (done) => {
 		else {
 			css(done);
 		}
-	
-		
+
+
 	});
 }
 exports.CssWatcher = WatchCss;

@@ -3,14 +3,14 @@
         <a class="navbar-brand" href="./">
             <i class="logo"></i>
         </a>
-        <button id="menutoggler" class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse"
-            data-target="#collapsingNavbar">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-times"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsingNavbar">
-            <div class="accordion" id="megamenu">
-                <div class="list-group list-group-flush">
+        <div class="mobile-menu d-lg-none">
+            <button id="menutoggler" class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsingNavbar">
+                <div class="accordion list-group list-group-flush" id="accmenu">
                     <div class="list-group-item">
                         <a class="btn btn-link btn-fa-chevron-right" href="#">
                             Shop
@@ -22,7 +22,7 @@
                             aria-controls="collapseOne">
                             Collection
                         </button>
-                        <div id="collection" class="collapse" data-parent="#megamenu">
+                        <div id="collection" class="collapse" data-parent="#accmenu">
                             <div class="list-group sub-menus">
                                 <a href="#" class="list-group-item">Brands</a>
                                 <a href="#" class="list-group-item">Men's watches</a>
@@ -39,7 +39,7 @@
                             aria-controls="collapseOne">
                             Accessories
                         </button>
-                        <div id="accessories" class="collapse" data-parent="#megamenu">
+                        <div id="accessories" class="collapse" data-parent="#accmenu">
 
                         </div>
                     </div>
@@ -60,13 +60,115 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="megamenu-lg d-none d-lg-flex" id="megamenu">
+            <div class="menu-item">
+                <a class="btn btn-link" href="#">
+                    Shop
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="btn btn-link has-submenu">
+                    Collection
+                </a>
+                <div class="submenu">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="list-group sub-menus">
+                                <h6>Top 10 Men's Brands</h6>
+                                <a href="#" class="list-group-item">Armani Exchange</a>
+                                <a href="#" class="list-group-item">Bulova</a>
+                                <a href="#" class="list-group-item">Casio</a>
+                                <a href="#" class="list-group-item">Citizen</a>
+                                <a href="#" class="list-group-item">Emporio Armani</a>
+                                <a href="#" class="list-group-item">Fossil</a>
+                                <a href="#" class="list-group-item">Hugo Boss</a>
+                                <a href="#" class="list-group-item">Rotary</a>
+                                <a href="#" class="list-group-item">Sekonda</a>
+                                <a href="#" class="list-group-item">Tissot</a>
+                                <a href="#" class="list-group-item btn btn-secondry">Show all Men's 212
+                                    brands</a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="list-group sub-menus">
+                                <h6>Top 10 Ladie's Brands</h6>
+                                <a href="#" class="list-group-item">Armani Exchange</a>
+                                <a href="#" class="list-group-item">Bulova</a>
+                                <a href="#" class="list-group-item">Casio</a>
+                                <a href="#" class="list-group-item">Citizen</a>
+                                <a href="#" class="list-group-item">Emporio Armani</a>
+                                <a href="#" class="list-group-item">Fossil</a>
+                                <a href="#" class="list-group-item">Hugo Boss</a>
+                                <a href="#" class="list-group-item">Rotary</a>
+                                <a href="#" class="list-group-item">Sekonda</a>
+                                <a href="#" class="list-group-item">Tissot</a>
+                                <a href="#" class="list-group-item btn btn-secondry">Show all Ladie's 191
+                                    brands</a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="list-group sub-menus brands">
+                                <h6>Top 20 Brands</h6>
+                                <a href="#" class="list-group-item">Accurist</a>
+                                <a href="#" class="list-group-item">Armani Exchange</a>
+                                <a href="#" class="list-group-item">Bulova</a>
+                                <a href="#" class="list-group-item">Casio</a>
+                                <a href="#" class="list-group-item">Citizen</a>
+                                <a href="#" class="list-group-item">Daniel Wellington</a>
+                                <a href="#" class="list-group-item">Emporio Armani</a>
+                                <a href="#" class="list-group-item">Fossil</a>
+                                <a href="#" class="list-group-item">G-Shock</a>
+                                <a href="#" class="list-group-item">Guess</a>
+                                <a href="#" class="list-group-item">Boss</a>
+                                <a href="#" class="list-group-item">Hugo Boss</a>
+                                <a href="#" class="list-group-item">Michael Kors</a>
+                                <a href="#" class="list-group-item">Olivia Burton</a>
+                                <a href="#" class="list-group-item">Rotary</a>
+                                <a href="#" class="list-group-item">Sekonda</a>
+                                <a href="#" class="list-group-item">Skagen</a>
+                                <a href="#" class="list-group-item">Timex</a>
+                                <a href="#" class="list-group-item">Tissot</a>
+                                <a href="#" class="list-group-item">Vivienne Westwood</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="menu-item">
+                <a class="btn btn-link collapsed has-submenu">
+                    Accessories
+                </a>
+                <div id="accessories" class="collapse" data-parent="#megamenu">
+
+                </div>
+            </div>
+            <div class="menu-item">
+                <a class="btn btn-link" href="#">
+                    Gift guide
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="btn btn-link" href="#">
+                    Blog
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="btn btn-link" href="#">
+                    Contact
+                </a>
+            </div>
+        </div>
     </nav>
 </div>
 
 <script>
-    $(function(){
-       $('#menutoggler').on('click', function(){
-           $('body').toggleClass('overlay');
-       })
+    $(function () {
+        $('#menutoggler').on('click', function () {
+            $('body').toggleClass('overlay');
+        })
     });
 </script>

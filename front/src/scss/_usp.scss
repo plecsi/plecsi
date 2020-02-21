@@ -10,19 +10,20 @@
       text-align: center;
       padding-top: 38px;
       padding-bottom: 37px;
-      &:nth-child(1), &:nth-child(2){
-          border-bottom: 1px solid rgba($light-red, 0.2);
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-bottom: 1px solid rgba($light-red, 0.2);
       }
       &:not(:nth-child(even)) {
         border-right: 1px solid rgba($light-red, 0.2);
         border-left: 1px solid $white;
       }
-    //   &:last-of-type{
-    //     border-top: 1px solid rgba($light-red, 0.2);
-    //   }
       span {
         font-size: 14px;
         font-weight: 600;
+      }
+      i {
+        color: $light-red;
       }
     }
   }
@@ -33,9 +34,11 @@
         padding-bottom: unset;
         margin-top: 38px;
         margin-bottom: 37px;
-       &:not(:nth-child(even)), &:nth-child(1), &:nth-child(2){
-           border:0;
-       }
+        &:not(:nth-child(even)),
+        &:nth-child(1),
+        &:nth-child(2) {
+          border: 0;
+        }
         &:not(:last-of-type) {
           border-right: 1px solid rgba($light-red, 0.2);
         }

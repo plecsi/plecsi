@@ -32,7 +32,6 @@ $base-font: "Montserrat", sans-serif;
     }
 
     &.btn-#{$name} {
-      
       &:after {
         font-family: custom-fa;
         content: $icon;

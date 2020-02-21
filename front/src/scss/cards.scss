@@ -1,9 +1,9 @@
 .cards-inner {
-  margin-top: 31px;
+  margin-top: 1.938rem;
   .card-deck {
     justify-content: space-between;
     .card {
-      margin-bottom: 19px;
+      margin-bottom: 1.19rem;
       .card-body {
         padding: 1.25rem 1.315rem;
         h5 {
@@ -16,9 +16,10 @@
     }
   }
   @include media-breakpoint-up(md) {
+    margin-top: 3.125rem;
     .card-deck {
       .card {
-        margin-bottom: 19px;
+        margin-bottom: 3.0625rem;
         .card-body {
           display: flex;
           flex-flow: column;
